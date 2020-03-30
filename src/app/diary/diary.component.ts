@@ -18,6 +18,10 @@ export class DiaryComponent implements OnInit {
 
   }
 
+  DeleteEntry(i){
+    this.myDiary.splice(i,1);
+  }
+
   constructor() { }
 
   ngOnInit(): void {
