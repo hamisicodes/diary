@@ -1,5 +1,5 @@
 export class Diary {
-    constructor(public activity:string ,public description:string){
+    constructor(public title:string ,public entry:string){
 
     }
   
