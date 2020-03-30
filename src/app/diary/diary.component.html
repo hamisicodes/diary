@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Document</title>
 </head>
 <body>
@@ -11,19 +12,21 @@
       <div class="col-sm">
         <h3>My Diary</h3>
         <br><br>
-        <app-diary-form></app-diary-form>
+        <app-diary-form (addNewEntry) = 'addAnotherEntry($event)'></app-diary-form>
       </div>
       <div class="col-sm">
-        <div class="card border-success mb-3" style="max-width: 18rem;">
-          <div class="card-header bg-transparent border-success">Header</div>
+        <div class="card border-success mb-3" style="max-width: 18rem;" *ngFor = "let entry_instance of myDiary; let i = index">
+          <div class="card-header bg-transparent border-success">Entry</div>
           <div class="card-body text-success">
-            <h5 class="card-title">Success card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <h5 class="card-title">{{entry_instance.title}}</h5>
+            <p class="card-text">{{entry_instance.entry}}</p>
           </div>
-          <div class="card-footer bg-transparent border-success">Footer</div>
+          <div class="card-footer bg-transparent border-success">Footer
+            <button type="button" class="btn btn-outline-danger pull-right">Delete</button>
+          </div>
         </div>
       </div>
-      
+       
     </div>
   </div>
 </body>
