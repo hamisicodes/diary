@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="my-diary">
+      <h4>Diary</h4>
+      <ul>
+          <div *ngFor = 'let instance of myDiary'>
+            <li>{{instance.activity}}</li>
+            
+            <app-diary-detail [instance] = 'instance'></app-diary-detail>
+          </div>
+          
+          
+      </ul>
+  </div>
+</body>
+</html>
