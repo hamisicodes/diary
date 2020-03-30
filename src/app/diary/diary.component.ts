@@ -10,8 +10,13 @@ export class DiaryComponent implements OnInit {
 
   myDiary:Diary[] = [
     new Diary("Go shopping","Shopping is fun.I will wake up very early in the morning"),
-    new Diary("Attend Conference","Software engineering conference at KICC in Nairobi"),
+    
   ];
+
+  addAnotherEntry(quote){
+    this.myDiary.push(quote);
+
+  }
 
   constructor() { }
 
