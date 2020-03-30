@@ -16,7 +16,6 @@ import { HighlightDirective } from './highlight.directive';
     DiaryComponent,
     DiaryDetailComponent,
     DiaryFormComponent,
-    
     HighlightDirective
   ],
   imports: [
