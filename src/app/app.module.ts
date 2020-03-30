@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DiaryComponent } from './diary/diary.component';
 import { DiaryDetailComponent } from './diary-detail/diary-detail.component';
 import { DiaryFormComponent } from './diary-form/diary-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DiaryFormComponent } from './diary-form/diary-form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
