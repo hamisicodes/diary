@@ -9,7 +9,7 @@ import { Diary } from '../diary';
 export class DiaryComponent implements OnInit {
 
   myDiary:Diary[] = [
-    new Diary("Go shopping","Shopping is fun.I will wake up very early in the morning"),
+    new Diary("Go shopping","Shopping is fun.I will wake up very early in the morning",new Date(2020,3,14)),
     
   ];
 

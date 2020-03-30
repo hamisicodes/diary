@@ -7,12 +7,12 @@ import { Diary } from '../diary';
   styleUrls: ['./diary-form.component.css']
 })
 export class DiaryFormComponent implements OnInit {
-  newEntry = new Diary("","");
+  newEntry = new Diary("","",new Date());
 
   @Output() addNewEntry = new EventEmitter<Diary>();
   addEntry(){
     this.addNewEntry.emit(this.newEntry);
-    this.newEntry =  new Diary("","");
+    this.newEntry =  new Diary("","",new Date());
 
   }
 
