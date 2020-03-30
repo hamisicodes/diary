@@ -8,6 +8,7 @@ import { DiaryDetailComponent } from './diary-detail/diary-detail.component';
 import { DiaryFormComponent } from './diary-form/diary-form.component';
 import { FormsModule } from '@angular/forms';
 import { StrikethroughDirective } from './strikethrough.directive';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { StrikethroughDirective } from './strikethrough.directive';
     DiaryComponent,
     DiaryDetailComponent,
     DiaryFormComponent,
-    StrikethroughDirective
+    StrikethroughDirective,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
