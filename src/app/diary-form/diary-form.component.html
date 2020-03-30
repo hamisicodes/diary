@@ -10,20 +10,16 @@
     <div class="container-fluid">
       
 
-        <form (ngSubmit)='submitQuote()'>
+        <form>
             <div class="form-group">
-              <label for="author">Author</label>
-              <input type="text" class="form-control" id="author" maxlength="20" size="20" [(ngModel)]="newQuote.author" name="name"  placeholder="Drizzy Drake">
+              <label for="author">title</label>
+              <input type="text" class="form-control" id="author" maxlength="20" size="20" name="name"  placeholder="Drizzy Drake">
               
             </div>
+           
             <div class="form-group">
-              <label for="postedby">Username</label>
-              <input type="text" class="form-control" id="postedby" maxlength="20" size="20" [(ngModel)]="newQuote.username" name="name" placeholder="Drake">
-              
-            </div>
-            <div class="form-group">
-              <label for="quote">Quote</label>
-              <textarea class="form-control" id="quote" rows="3" cols="5" [(ngModel)]="newQuote.description" name="name"></textarea>
+              <label for="quote">entry</label>
+              <textarea class="form-control" id="quote" rows="3" cols="5" name="name"></textarea>
             
             </div>
             <button type="submit" class="btn btn-primary">Post</button>
