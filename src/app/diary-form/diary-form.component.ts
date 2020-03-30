@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 import { Diary } from '../diary';
 
 @Component({
@@ -8,6 +8,13 @@ import { Diary } from '../diary';
 })
 export class DiaryFormComponent implements OnInit {
   newEntry = new Diary("","");
+
+  @Output() addNewEntry = new EventEmitter<Diary>();
+  addEntry(){
+    this.addNewEntry.emit(this.newEntry);
+    this.newEntry =  new Diary("","");
+
+  }
 
   constructor() { }
 
